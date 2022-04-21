@@ -1,0 +1,20 @@
+@use "custom";
+
+//Import The components
+
+
+@use "components/typography";
+
+//Import Sections
+
+@use "sections/navbar";
+@use "sections/footer";
+@use "sections/about";
+@use "sections/contact";
+@use "sections/section-1";
+@use "sections/section-2";
+@use "sections/artist-page";
+@use "sections/contact-page";
+
+
+

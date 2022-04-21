@@ -1,0 +1,111 @@
+@use "../custom"as *;
+
+
+.contact-page{
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin:0;
+
+  .container{
+    justify-content: center;
+    text-align: center;
+
+    .title{
+      background-color: $gray-100;
+      margin: 2rem;
+      padding: 1rem;
+      text-align: center;
+
+      h4{
+        margin: 0;
+        display: inline-block;
+        line-height: 2rem;
+      }
+      svg{
+        display: inline-block;
+        margin-bottom: 1rem;
+        
+      }
+    }
+
+    form{
+      justify-content: center;
+      text-align: center;
+      //LARGE SCREENS
+      padding: 0 15rem;
+      //MEDIUM SCREENS
+      @include media-breakpoint-down(lg){
+        padding: 0 5rem;
+      }
+      //SMALL SCREENS
+      @include media-breakpoint-down(sm){
+        padding: 0 2rem;
+      }
+      .row{
+        margin: 1rem 0;
+        .col-info, .col-names{
+          text-align: start;
+          justify-content: center;
+
+          p{
+            margin: 0.5rem;
+          }
+        }
+        input{
+          width: 100%;
+          border: 1px solid #a63396;
+          background: #fafafa;
+          border-radius: 10px;
+          padding: 0.5rem;
+        }
+        textarea{
+          width: 100%;
+          padding: 1.5rem;
+          border: 1px solid #a63396;
+          background: #fafafa;
+          border-radius: 10px;
+        }
+        
+      }
+      .css-button-sliding-to-left--rose {
+        min-width: 130px;
+        height: 40px;
+        color: #fff;
+        padding: 5px 10px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 10px;
+        z-index: 0;
+        background: #fff;
+        overflow: hidden;
+        border: 2px solid #a63396;
+        color: $black;
+      }
+      
+      .css-button-sliding-to-left--rose:hover {
+        color: #fff;
+      }
+      
+      .css-button-sliding-to-left--rose:hover:after {
+        width: 100%;
+      }
+      
+      .css-button-sliding-to-left--rose:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        transition: all 0.3s ease;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        background: #a63396;
+      }
+    }
+  }
+}

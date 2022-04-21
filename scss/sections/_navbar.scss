@@ -1,0 +1,124 @@
+@use "../custom" as *;
+
+
+.menu {
+background-color: white;
+padding: 0;
+font-family: 'Pacifico',
+cursive;
+.container-fluid{
+
+  .navbar-brand{
+   font-size: 2rem;
+   padding: 1rem 0;
+   margin-left: 5rem;
+   text-transform: capitalize;
+    // SMALL SCREENS
+    @include media-breakpoint-down(md) {
+     font-size: 1.5rem;
+    margin-left: 0;
+    }
+  }
+
+
+#navbarTogglerDemo01{
+  text-align: center;
+  justify-content: center;
+  //LARGE SCREENS
+  @include media-breakpoint-up(lg){
+    padding-left: 25rem;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    .nav-item{
+      text-align: center;
+          .nav-link {
+                  font-size: 1.2rem;
+                  padding: 0.5rem 1.7rem;
+                  margin: 0 1rem;
+                  display: inline-block;
+                  color: $black;
+                  cursor: pointer;
+                  // height: 2.7rem;
+                  transition: 0.2s;
+          
+                  // SMALL SCREENS
+                  @include media-breakpoint-down(md){
+                    width: 5rem;
+                    font-size: 1rem;
+                    margin: 0 0.5rem;
+                    padding: 0.5rem 1rem;
+                  }
+                  @include media-breakpoint-down(sm){
+                    width: 6rem;
+                    font-size: 1rem;
+                    margin: 0 0.3rem;
+                  }
+                }
+                .nav-link:hover{
+                  transform: scale(1.2);
+                }
+                .nav-one{
+                  @include media-breakpoint-up(sm){
+                  animation: inflate1 2s linear 2;
+                  }
+                
+                }
+                .nav-two{
+                  @include media-breakpoint-up(sm) {
+                  animation: inflate2 2s linear 2;
+                  }
+                  
+                }
+                .nav-three{
+                  @include media-breakpoint-up(sm) {
+                  animation: inflate3 2s linear 2;
+                  }
+                }
+    }
+  }
+}
+
+@keyframes inflate1 {
+  0%{
+   transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes inflate2 {
+  0%{
+   transform: scale(1);
+  }
+  50%{
+   transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes inflate3 {
+  0%{
+   transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+}
+
+
+  
+}
+}

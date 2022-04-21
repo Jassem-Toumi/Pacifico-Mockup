@@ -1,0 +1,40 @@
+@use "../custom"as *;
+
+.artist-page{
+  justify-content: center;
+  text-align: center;
+  margin: 4rem 0;
+  padding: 0;
+
+  .container{
+    justify-content: center;
+    text-align: center;
+    .column{
+      justify-content: center;
+      text-align: center;
+      padding-top: 4rem;
+      img{
+        border-radius: 10px;
+        //BIG SCREENS
+        max-width: 25rem;
+        //MEDIUM & SMALL SCREENS
+        @include media-breakpoint-down(lg){
+          max-width: 20rem;
+        }
+      }
+      h2{
+        background-color: $gray-200;
+        padding: 1rem;
+      }
+      p{
+        line-height: 2.5rem;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        text-align: start;
+        font-weight: 100;
+        color: $gray-700;
+        padding: 1rem;
+      }
+    }
+  }
+}

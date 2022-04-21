@@ -1,0 +1,170 @@
+@use "../custom"as *;
+
+.section-1{
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  text-align: center;
+  height: 38rem;
+  // SMALL SCREENS
+  @include media-breakpoint-down(sm){
+    height: 100%;
+  }
+
+  .container{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+
+    .row{
+      justify-content: center;
+     
+      padding: 0;
+      margin: 0;
+      .column-p-1{
+        padding: 2rem 0 0 0 ;
+        h4{
+          line-height: 2.5rem;
+        }
+        .icons{
+          margin: 1.5rem 0;
+          a{
+            i{
+              font-size:1.7rem;
+              margin: 0 1rem;
+            }
+          }
+        }
+        
+      }
+      .column-p-2{
+        .carousel-item {
+          justify-content: center;
+
+
+         img{
+           //SMALL SCREENS
+           @include media-breakpoint-down(sm){
+             height: 25rem;
+           }
+            // LARGE SCREENS
+              @include media-breakpoint-up(lg) {
+              height: 540px;
+              }
+          //  MEDIUM SCREENS
+          @include media-breakpoint-between(sm, lg) {
+          height: 480px;
+          }
+
+         }
+         .gif{
+           height: 400px;
+          //  width: 410px;
+          //  Medium Devices
+          @include media-breakpoint-between(sm,lg){
+            height: 290px;
+            width: 280px;
+          }
+          // SMALL SCREENS
+          @include media-breakpoint-down(sm){
+              height: 295px;
+              width: 295px;
+          }
+         }
+        }
+                  // Large screens ONlY
+                  @include media-breakpoint-up(lg) {
+                    padding-left: 7rem;
+                  }
+                  // MEDIUM screens ONlY
+                  @include media-breakpoint-between(sm, lg) {
+                    padding-left: 3rem;
+                  }
+
+                  .gif-img{
+                    background: #c0edcb;
+                    padding-top: 4rem;
+                    padding-left: 1rem;
+                      //SMALL SCREENS
+                      @include media-breakpoint-down(sm) {
+                        height: 25rem;
+                        padding:2rem 0 ;
+                      }
+                      
+                      // LARGE SCREENS
+                      @include media-breakpoint-up(lg) {
+                        height: 540px;
+                      }
+                      
+                      //  MEDIUM SCREENS
+                      @include media-breakpoint-between(sm, lg) {
+                        height: 480px;
+                        padding-left: 0;
+                      }
+                  }
+                
+      }
+    }
+  }
+}
+
+
+
+
+// .column-p-1{
+
+//     justify-content: center;
+//     text-align: center;
+
+//   .square-1{
+//     @include media-breakpoint-down(lg){
+//       display: none;
+//     }
+//     border: 1px solid $black;
+//     padding: 0.1rem 3rem;
+//     .square-2 {
+//       border: 1px solid $black;
+//       padding: 0.1rem 2rem;
+//     .square-3 {
+//       border: 1px solid $black;
+//       padding: 0.1rem 1rem;
+//     }
+//     }
+//   }
+
+
+
+//   .artist-intro-image-1, .artist-intro-image-2{
+//     padding: 0;
+//     margin: 0;
+//     justify-content: center;
+//     text-align: center;
+//     border: 1px solid $black;
+//   //  SMALL SCREENS 
+//   img{
+//     @include media-breakpoint-down(sm){
+//       width: 290px;
+//     }
+//   }
+//   }
+//   .artist-intro-image-1{
+//     @include media-breakpoint-up(lg){
+//       display: none;
+//     }
+//   }
+//   .social-media-icons{
+//     margin: 1.5rem 0;
+//     width: 100%;
+//     a{
+//       padding: 1rem;
+
+//       i{
+//         font-size: 1.5rem;
+//         transition: 0.2s;
+//       }
+//       i:hover{
+//         transform: scale(1.3);
+//       }
+//     }
+//   }
+// }

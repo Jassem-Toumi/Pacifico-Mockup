@@ -1,0 +1,56 @@
+@use "../custom"as *;
+
+
+.footer{
+text-align: center;
+justify-content: center;
+background: #a63396;
+padding: 0 0 2rem 0;
+
+
+.container-0{
+  justify-content: center;
+  svg{
+    margin: 0;
+    width: 100%;
+  }
+.footer-row-1 {
+  justify-content: center;
+  margin: 0;
+  .footer-col {
+
+    //SMALL DEVICES
+    @include media-breakpoint-down(sm){
+      margin: 0.5rem 0;
+    }
+    justify-content: center;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    button{
+      font-family: "Pacifico",
+      cursive;
+    }
+    a{
+      i{
+              font-size: 2rem;
+              margin: 0 1rem;
+              color: #fff;
+              //MEDIUM DEVICES 
+              @include media-breakpoint-between (sm, lg){
+                margin: 0 0.5rem;
+              }
+      }
+
+    }
+    .icons{
+      a{
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+}
+
+  }
+
